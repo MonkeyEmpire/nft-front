@@ -1,91 +1,125 @@
-# NFT-front
+# Welcome to HashLips 👄
 
-GuildBanners NFT
+![](https://github.com/HashLips/hashlips_nft_minting_dapp/blob/main/logo.png)
 
-## Getting started
+All the code in these repos was created and explained by HashLips on the main YouTube channel.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+To find out more please visit:
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+[📺 YouTube](https://www.youtube.com/channel/UC1LV4_VQGBJHTJjEWUmy8nA)
 
-## Add your files
+[👄 Discord](https://discord.com/invite/qh6MWhMJDN)
 
-- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+[💬 Telegram](https://t.me/hashlipsnft)
 
+[🐦 Twitter](https://twitter.com/hashlipsnft)
+
+[ℹ️ Website](https://hashlips.online/HashLips)
+
+# HashLips NFT minting dapp 🔥
+
+![](https://github.com/HashLips/hashlips_nft_minting_dapp/blob/main/banner.png)
+
+This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp. There are two ways of using this repo, you can go the simple route or the more complex one.
+
+The simple route is so simple, all you need to do is download the build folder on the release page and change the configuration to fit your needs. (Follow the video for a walk through).
+
+The more complex route allows you to add additional functionality if you are comfortable with coding in react.js. (Follow the below instructions for a walk through).
+
+## Installation 🛠️
+
+If you are cloning the project then run this first, otherwise you can download the source code on the release page and skip this step.
+
+```sh
+git clone https://github.com/HashLips/hashlips_nft_minting_dapp.git
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/samy.f/nft-front.git
-git branch -M main
-git push -uf origin main
+
+Make sure you have node.js installed so you can use npm, then run:
+
+```sh
+npm install
 ```
 
-## Integrate with your tools
+## Usage ℹ️
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/integrations/)
+In order to make use of this dapp, all you need to do is change the configurations to point to your smart contract as well as update the images and theme file.
 
-## Collaborate with your team
+For the most part all the changes will be in the `public` folder.
 
-- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+To link up your existing smart contract, go to the `public/config/config.json` file and update the following fields to fit your smart contract, network and marketplace details. The cost field should be in wei.
 
-## Test and Deploy
+Note: this dapp is designed to work with the intended NFT smart contract, that only takes one parameter in the mint function "mintAmount". But you can change that in the App.js file if you need to use a smart contract that takes 2 params.
 
-Use the built-in continuous integration in GitLab.
+```json
+{
+  "CONTRACT_ADDRESS": "0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
+  "SCAN_LINK": "https://polygonscan.com/token/0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
+  "NETWORK": {
+    "NAME": "Polygon",
+    "SYMBOL": "Matic",
+    "ID": 137
+  },
+  "NFT_NAME": "Nerdy Coder Clones",
+  "SYMBOL": "NCC",
+  "MAX_SUPPLY": 1000,
+  "WEI_COST": 75000000000000000,
+  "DISPLAY_COST": 0.075,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
+  "SHOW_BACKGROUND": true
+}
+```
 
-- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://docs.gitlab.com/ee/user/clusters/agent/)
+Make sure you copy the contract ABI from remix and paste it in the `public/config/abi.json` file.
+(follow the youtube video if you struggle with this part).
 
-***
+Now you will need to create and change 2 images and a gif in the `public/config/images` folder, `bg.png`, `example.gif` and `logo.png`.
 
-# Editing this README
+Next change the theme colors to your liking in the `public/config/theme.css` file.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://gitlab.com/-/experiment/new_project_readme_content:12e1cf57c408fee71d04e2929a42b5a0?https://www.makeareadme.com/) for this template.
+```css
+:root {
+  --primary: #ebc908;
+  --primary-text: #1a1a1a;
+  --secondary: #ff1dec;
+  --secondary-text: #ffffff;
+  --accent: #ffffff;
+  --accent-text: #000000;
+}
+```
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Now you will need to create and change the `public/favicon.ico`, `public/logo192.png`, and
+`public/logo512.png` to your brand images.
 
-## Name
-Choose a self-explaining name for your project.
+Remember to update the title and description the `public/index.html` file
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+```html
+<title>Nerdy Coder Clones</title>
+<meta name="description" content="Mint your Nerdy Coder Clone NFT" />
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Also remember to update the short_name and name fields in the `public/manifest.json` file
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+```json
+{
+  "short_name": "NCC",
+  "name": "Coder Clone NFT"
+}
+```
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+After all the changes you can run.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+```sh
+npm run start
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Or create the build if you are ready to deploy.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```sh
+npm run build
+```
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Now you can host the contents of the build folder on a server.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
+That's it! you're done.

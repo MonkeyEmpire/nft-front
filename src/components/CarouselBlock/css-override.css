@@ -1,0 +1,18 @@
+.carousel .carousel-status,
+.carousel .control-dots,
+.carousel .thumbs-wrapper,
+.carousel.carousel-slider .control-arrow {
+    display: none;
+}
+
+/* .carousel .thumbs-wrapper {
+    display: none;
+} */
+
+.slide {
+    opacity: 0.3;
+}
+
+.slide.selected {
+    opacity: 1;
+}
