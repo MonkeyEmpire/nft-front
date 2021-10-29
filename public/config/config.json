@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
-  "SCAN_LINK": "https://polygonscan.com/token/0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
+  "CONTRACT_ADDRESS": "0x1B45FfE62304c5Bf6ecc0B9c0a04f7B28265C7EB",
+  "SCAN_LINK": "https://cchain.explorer.avax.network/address/0x1B45FfE62304c5Bf6ecc0B9c0a04f7B28265C7EB/write-contract",
   "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "Matic",
-    "ID": 137
+    "NAME": "Avalanche",
+    "SYMBOL": "AVAX",
+    "ID": 1
   },
-  "NFT_NAME": "CryptoMonkey Empire Guild Banners first collection",
-  "SYMBOL": "NCC",
-  "MAX_SUPPLY": 1000,
-  "WEI_COST": 75000000000000000,
-  "DISPLAY_COST": 1,
+  "NFT_NAME": "CryptoMonkey Empire Guild Banners",
+  "SYMBOL": "CMEGB",
+  "MAX_SUPPLY": 1600,
+  "WEI_COST": 2500000000000000000,
+  "DISPLAY_COST": 2.5,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
+  "MARKETPLACE": "NFTrade",
+  "MARKETPLACE_LINK": "https://app.nftrade.com/assets/avalanche/0x1b45ffe62304c5bf6ecc0b9c0a04f7b28265c7eb",
   "SHOW_BACKGROUND": true
 }
