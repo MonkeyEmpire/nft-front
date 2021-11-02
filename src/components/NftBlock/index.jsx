@@ -28,7 +28,8 @@ export const NftBlock = ({
         backgroundColor: 'var(--accent)',
         padding: 24,
         borderRadius: 24,
-        border: '4px dashed var(--secondary)',
+        border: '1px solid rgba(192,192,192, .5)',
+        boxShadow: '0 2px 6px rgb(0 0 0 / 0.1)',
       }}
     >
       <TextTitle
