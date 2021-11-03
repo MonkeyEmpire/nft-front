@@ -63,11 +63,11 @@ function App() {
         from: blockchain.account,
         value: totalCostWei,
       })
-      .once('error', (err) => {
+      .once('error', () => {
         setFeedback('Sorry, something went wrong please try again later.');
         setClaimingNft(false);
       })
-      .then((receipt) => {
+      .then(() => {
         setFeedback(
           `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`,
         );
