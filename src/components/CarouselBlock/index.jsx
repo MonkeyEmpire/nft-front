@@ -74,7 +74,7 @@ export const CarouselBlock = () => (
     </Carousel>
     <div style={{ textAlign: 'center', marginTop: '48px' }}>
       <TextTitle style={{
-        fontSize: '40px', color: 'var(--primary)',
+        fontSize: '40px', color: 'var(--primary)', fontWeight: 600,
       }}
       >
         CryptoMonkey Empire

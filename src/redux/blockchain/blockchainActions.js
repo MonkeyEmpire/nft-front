@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 // constants
 import Web3EthContract from 'web3-eth-contract';
 import Web3 from 'web3';
@@ -22,11 +23,6 @@ const updateAccountRequest = (payload) => ({
   type: 'UPDATE_ACCOUNT',
   payload,
 });
-
-export const updateAccount = (account) => async (dispatch) => {
-  dispatch(updateAccountRequest({ account }));
-  dispatch(fetchData(account));
-};
 
 export const connect = () => async (dispatch) => {
   dispatch(connectRequest());
@@ -56,7 +52,7 @@ export const connect = () => async (dispatch) => {
       const networkId = await ethereum.request({
         method: 'net_version',
       });
-      if (networkId === CONFIG.NETWORK.ID) {
+      if (networkId == CONFIG.NETWORK.ID) {
         const SmartContractObj = new Web3EthContract(
           abi,
           CONFIG.CONTRACT_ADDRESS,
@@ -69,8 +65,10 @@ export const connect = () => async (dispatch) => {
           }),
         );
         // Add listeners start
-        ethereum.on('accountsChanged', (accs) => {
-          dispatch(updateAccount(accs[0]));
+        // eslint-disable-next-line no-shadow
+        ethereum.on('accountsChanged', (accountsChanged) => {
+          // eslint-disable-next-line no-use-before-define
+          dispatch(updateAccount(accountsChanged[0]));
         });
         ethereum.on('chainChanged', () => {
           window.location.reload();
@@ -85,4 +83,9 @@ export const connect = () => async (dispatch) => {
   } else {
     dispatch(connectFailed('Install Metamask.'));
   }
+};
+
+export const updateAccount = (account) => async (dispatch) => {
+  dispatch(updateAccountRequest({ account }));
+  dispatch(fetchData(account));
 };
