@@ -53,8 +53,6 @@ function App() {
     const gasLimit = CONFIG.GAS_LIMIT;
     const totalCostWei = String(cost * mintAmount);
     const totalGasLimit = String(gasLimit * mintAmount);
-    //console.log('Cost: ', totalCostWei);
-    //console.log('Gas limit: ', totalGasLimit);
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
@@ -66,12 +64,10 @@ function App() {
         value: totalCostWei,
       })
       .once('error', (err) => {
-        //console.log(err);
         setFeedback('Sorry, something went wrong please try again later.');
         setClaimingNft(false);
       })
       .then((receipt) => {
-        //console.log(receipt);
         setFeedback(
           `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`,
         );
