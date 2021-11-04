@@ -16,7 +16,7 @@ import { Container, TextDescription } from '../styles/globalStyles';
 //     flex-direction: column;
 // `;
 
-export const Footer = ({ gasLimit, networkName }) => (
+export const Footer = ({ networkName }) => (
   <Container jc="center" ai="center" style={{ width: '100%', backgroundColor: 'black', padding: '8px' }}>
     <TextDescription
       style={{
