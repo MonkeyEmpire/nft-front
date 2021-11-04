@@ -10,7 +10,7 @@
   "SYMBOL": "CMEGB",
   "MAX_SUPPLY": 1600,
   "WEI_COST": 2500000000000000000,
-  "DISPLAY_COST": 2.5,
+  "DISPLAY_COST": 1,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "NFTrade",
   "MARKETPLACE_LINK": "https://app.nftrade.com/assets/avalanche/0x1b45ffe62304c5bf6ecc0b9c0a04f7b28265c7eb",
