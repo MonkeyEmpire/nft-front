@@ -36,13 +36,7 @@ export const Footer = ({ gasLimit, networkName }) => (
         color: 'var(--primary-text)',
       }}
     >
-      We have set the gas limit to
-      {' '}
-      {gasLimit}
-      {' '}
-      for the contract to
-      successfully mint your NFT. We recommend that you don&apos;t lower the
-      gas limit.
+      Ape in now !
     </TextDescription>
   </Container>
 );
